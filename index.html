@@ -5,16 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Personal research and blog website">
   <title>Cosmos</title>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Site icon — change the emoji to whatever you like -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>">
-
-  <!-- Styles (do not edit — change design in css/style.css) -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,7 +19,6 @@
   <div id="app">
     <main id="main-content"></main>
 
-    <!-- Search overlay -->
     <div id="search-overlay">
       <div class="search-box">
         <div class="search-title">Search</div>
@@ -46,14 +39,12 @@
   <div id="toast"></div>
 
   <!--
-    ╔══════════════════════════════════════════╗
-    ║  EDIT YOUR CONTENT IN:  js/data.js       ║
-    ║  - About Me info                         ║
-    ║  - Research posts                        ║
-    ║  - Blog posts                            ║
-    ║  DO NOT edit main.js or style.css        ║
-    ╚══════════════════════════════════════════╝
+    Script load order (do not change):
+      1. config.js  — your personal info (i18n + about)
+      2. data.js    — auto-generated posts (run build.py to update)
+      3. main.js    — site engine, never edit
   -->
+  <script src="js/config.js"></script>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 
